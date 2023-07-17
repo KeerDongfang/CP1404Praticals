@@ -4,6 +4,7 @@ def main():
 
 
 def check_password_validity(password):
+    """check whether the password is valid and print the result"""
     while len(password) <= 0:
         print("Invalid password.")
         password = input("Please enter the password.")
