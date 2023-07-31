@@ -3,12 +3,16 @@ CP1404/CP5632 Practical
 Data file -> lists program
 """
 
+from operator import itemgetter
+
 FILENAME = "subject_data.txt"
+nested_lists = []
 
 
 def main():
     data = get_data()
     print(data)
+    display_details()
 
 
 def get_data():
@@ -23,7 +27,15 @@ def get_data():
         parts[2] = int(parts[2])  # Make the number an integer (ignore PyCharm's warning)
         print(parts)  # See if that worked
         print("----------")
+        nested_lists.append(parts)
+        nested_lists.sort()
     input_file.close()
+    return nested_lists
+
+
+def display_details():
+    for i in range(len(nested_lists)):
+        print(f"{nested_lists[i][0]} is taught by {nested_lists[i][1]} and has {nested_lists[i][2]} students.")
 
 
 main()
