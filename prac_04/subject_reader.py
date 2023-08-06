@@ -10,6 +10,7 @@ nested_lists = []
 
 
 def main():
+    """Main function"""
     data = get_data()
     print(data)
     display_details()
@@ -34,6 +35,7 @@ def get_data():
 
 
 def display_details():
+    """Print data in certain arrangement"""
     for i in range(len(nested_lists)):
         print(f"{nested_lists[i][0]} is taught by {nested_lists[i][1]} and has {nested_lists[i][2]} students.")
 
