@@ -2,6 +2,7 @@ from prac_06.guitar import Guitar
 
 
 def main():
+    """main function"""
     gibson = Guitar("Gibson L-5 CES", 1922, 16035.40)
     another_guitar = Guitar("Another Guitar", 2013, 100)
 
