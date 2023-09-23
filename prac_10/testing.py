@@ -52,6 +52,13 @@ def run_tests():
     assert test_car.fuel == 0
 
 
+def phrase_to_sentence(phrase):
+    sentence = phrase.capitalize()
+    if sentence[-1] != '.':
+        sentence += '.'
+    return sentence
+
+
 run_tests()
 
 # TODO: 3. Uncomment the following line and run the doctests
